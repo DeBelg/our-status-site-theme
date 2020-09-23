@@ -1,18 +1,16 @@
-'use strict';
+const gulp = require('gulp')
+const gulpSass = require('gulp-sass')
  
-var gulp = require('gulp');
-var sass = require('gulp-sass');
- 
-sass.compiler = require('node-sass');
+gulpSass.compiler = require('node-sass')
 
-gulp.task('sass', function () {
-  return gulp.src('./assets/scss/style.scss')
-    .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./assets/css'));
-});
+const sass = () =>
+  gulp.src('./assets/scss/style.scss')
+    .pipe(gulpSass().on('error', gulpSass.logError))
+    .pipe(gulp.dest('./assets/css'))
 
-gulp.task('sass:watch', function () {
-  gulp.watch('./assets/scss/style.scss', ['sass']);
-});
+const sassWatch = () =>
+  gulp.watch('./assets/scss/style.scss', ['sass'])
 
-gulp.task('default', ['sass:watch'])
+exports.sass = sass
+exports.sassWatch = sassWatch
+exports.default = sassWatch
