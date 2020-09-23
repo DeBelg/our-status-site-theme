@@ -4,26 +4,14 @@ This is the Ghost theme used for https://our.status.im/.
 
 # Usage
 
-Install the dependencies:
-```
-yarn install
-```
-To verify the theme is valid use:
-```
-yarn verify
-```
-To pack up the theme use:
-```
-yarn archive
-```
+Here's how you can get an archive built:
 
-# CSS
+* `yarn install` - Install the dependencies
+* `yarn verify` - To verify the theme is valid use
+* `yarn build` - Compile the SCSS files into CSS
+* `yarn archive` - Pack up the theme for use with Ghost
 
-We just fetch CSS from tha main site:
-```
-yarn getcss
-```
-The updates to tempaltes need to be manual.
+The last command should result in a `our-status-theme.zip` file.
 
 # Development
 
