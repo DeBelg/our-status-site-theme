@@ -9,7 +9,9 @@
         "ghost-start": "ghost start -D -d /var/tmp/ghost",
         "ghost-stop": "ghost stop -D -d /var/tmp/ghost",
         "build": "gulp sass",
-        "devel": "gulp sassWatch"
+        "devel": "gulp sassWatch",
+        "verify": "gscan -3 ./",
+        "archive": "zip -r our-status-theme.zip . -x 'node_modules/*' -x '.git*'"
     },
     "engines": {
         "ghost": ">=2.0.0",
@@ -33,6 +35,7 @@
     ],
     "devDependencies": {
         "ghost-cli": "^1.14.1",
+        "gscan": "^3.5.7",
         "gulp": "4.0.2",
         "gulp-minify": "3.1.0",
         "gulp-sass": "4.1.0"
