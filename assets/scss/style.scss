@@ -970,6 +970,86 @@ blockquote{
     }
 }
 
+.btn-primary {
+    background-color: #3A56D4;
+    border: 1px solid #3A56D4;
+    border-radius: 3px;
+    color: white;
+}
+
+.get-status-cta {
+    color: white;
+    margin-left: 30px;
+    width: 170px;
+    height: 47px;
+    box-sizing: border-box;
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.margin-left-cta {
+    margin-left: 1.5rem;
+}
+
+@media screen and (max-width: 1540px) {
+    .get-status-cta {
+        width: 150px;
+        margin-left: 20px !important;
+    }
+
+    .margin-left-cta {
+        margin-left: 1rem;
+    }
+}
+
+@media screen and (max-width: 1350px) {
+    header nav ul li a {
+        padding: 0 15px;
+    }
+}
+
+@media screen and (max-width: 1260px) {
+    header nav {
+        margin-left: -50px;
+    }
+}
+
+
+@media screen and (min-width: 1200px) {
+    .mobile-get-status-cta {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .mobile-get-status-cta {
+        position: absolute;
+        right: 65px;
+        top: 10px;
+        height: 40px;
+        max-width: 150px;
+    }
+
+    .get-status-cta {
+        width: 100%;
+        margin-left: 0 !important;
+    }
+
+    header .mobile-nav .btns .btn:after {
+        display: none;
+    }
+
+    header .mobile-nav .btns .btn {
+        padding-right: 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .mobile-get-status-cta {
+        width: 145px;
+    }
+}
+
 @media screen and (max-width: 991px) {
     .loop{
         &.loop-first{
