@@ -81,6 +81,60 @@
 
 {{#get "posts" limit="3" include="tags,authors" filter="id:-{{id}}+primary_tag:{{primary_tag.slug}}"}}
     {{#if posts}}
+        <div class="download-status">
+            <div class="row">
+                <div class="ml-auto mr-auto">
+                    <h3>{{t "Download Status for"}}</h3>
+                    <div class="download-container">
+                        <div class="download-box">
+                            <div class="download-copy-container">
+                                <div class="download-title">Mobile</div>
+                                <div class="download-description">Private messaging, secure crypto transactions, Web3 DApp browsing in your pocket.</div>
+                                <div class="download-buttons">
+                                    <a href="https://apps.apple.com/us/app/status-private-communication/id1178893006" id="official:ios" class="">
+                                        <img class="mobile-download" src="{{asset "img/app-store.svg"}}">
+                                    </a>
+                                    <a href="https://play.google.com/store/apps/details?id=im.status.ethereum" id="official:android" class="download-margin-left">
+                                        <img class="mobile-download" src="{{asset "img/google-play.svg"}}">
+                                    </a>
+                                    <a href="https://status-im-files.ams3.cdn.digitaloceanspaces.com/StatusIm-Mobile-v1.10.1.apk" id="official:apk" class="download-margin-left">
+                                        <img class="mobile-download" src="{{asset "img/apk.svg"}}">
+                                    </a>
+                                </div>
+                                <div class="semi-circle"></div>
+                                <div class="download-mobile-container">
+                                    <img class="download-mobile-image" src="{{asset "img/teaser-image.png"}}">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="download-box">
+                            <div class="download-copy-container">
+                                <div class="download-title">Desktop</div>
+                                <div class="download-description">Test out Desktop Beta for private, secure communication where you work.</div>
+                                <div class="download-buttons">
+                                    <a href="https://status-im-files.ams3.cdn.digitaloceanspaces.com/StatusIm-Desktop-v0.1.0-beta.5.dmg" id="official:ios" class="desktop-download">
+                                        <img src="{{asset "img/apple-white-logo.svg"}}">
+                                        <span class="ml-2">Mac</span>
+                                    </a>
+                                    <a href="https://status-im-files.ams3.cdn.digitaloceanspaces.com/StatusIm-Desktop-v0.1.0-beta.5.zip" id="official:android" class="desktop-download download-margin-left">
+                                        <img src="{{asset "img/windows-white-logo.svg"}}">
+                                        <span class="ml-2">Windows</span>
+                                    </a>
+                                    <a href="https://status-im-files.ams3.cdn.digitaloceanspaces.com/StatusIm-Desktop-v0.1.0-beta.5.AppImage" id="official:apk" class="desktop-download download-margin-left">
+                                        <img src="{{asset "img/linux-white-logo.svg"}}">
+                                        <span class="ml-2">Linux</span>
+                                    </a>
+                                </div>
+                                <div class="semi-circle"></div>
+                                <div class="download-desktop-container">
+                                    <img class="download-desktop-image" src="{{asset "img/desktop-app-laptop.png"}}">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="related-posts">
             <div class="container">
                 <div class="row">

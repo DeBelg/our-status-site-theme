@@ -10,6 +10,7 @@ $purple: #4360DF;
 $dark-purple: #2D48BE;
 $white-rgba: rgba(255, 255, 255, 0.6);
 $lighter-grey: #EAECEF;
+$primary: #3F59CD;
 
 $manrope: 'Manrope', sans-serif;
 $manrope-regular: 400;
@@ -616,6 +617,244 @@ blockquote{
     .end{
         opacity: .3;
         pointer-events: none;
+    }
+}
+
+.download-status{
+    background: $primary;
+    padding: 40px 0 20px;
+    h3 {
+        display: flex;
+        justify-content: center;
+        font-weight: normal;
+        font-size: 28px;
+        line-height: 38px;
+        color: #FFFFFF;
+        margin-bottom: 0 !important;
+    }
+    .download-container {
+        display: flex;
+        justify-content: center;
+        flex-flow: wrap;
+        padding: 20px 40px;
+    }
+    .download-box {
+        margin: 25px 34px;
+        padding: 20px;
+        display: inline-block;
+        width: 450px;
+        height: 480px;
+        background: #FFFFFF;
+        border-radius: 2px;
+        position: relative;
+        overflow: hidden;
+    }
+    .download-copy-container {
+        max-width: 460px;
+        margin: 10px auto;
+    }
+    .download-title {
+        font-size: 32px;
+        line-height: 48px;
+        text-align: center;
+        color: #000000;
+        margin-bottom: 15px;
+    }
+    .download-description {
+        font-size: 18px;
+        line-height: 32px;
+        text-align: center;
+        color: rgba(60, 64, 73, 0.8);
+    }
+    .download-buttons {
+        display: flex;
+        justify-content: center;
+        margin-top: 25px;
+    }
+    .download-margin-left {
+        margin-left: 15px;
+    }
+    .mobile-download {
+        height: 40px;
+    }
+    .desktop-download {
+        height: 40px;
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        background-color: #000000;
+        color: white;
+        font-size: 18px;
+        padding: 12px 18px;
+        text-align: center;
+        border-radius: 3px;
+    }
+    .download-mobile-container {
+        position: absolute;
+        bottom: -70px;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+    .download-desktop-container {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+    .download-mobile-image {
+        width: 250px;
+    }
+    .download-desktop-image {
+        width: 320px;
+    }
+    .semi-circle {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+        bottom: 0;
+        width: 450px;
+        height: 225px;
+        border-radius: 450px 450px 0 0;
+        background-color: #F4F5F7;
+    }
+}
+
+@media screen and (max-width: 670px) {
+    .download-status{
+        .download-box {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+        }
+        .download-container {
+            padding: 5px;
+        }
+        .download-copy-container {
+            margin: 10px 0;
+            width: 60%;
+            padding-left: 5px;
+            padding-right: 13px;
+        }
+        .download-title {
+            font-size: 24px;
+            line-height: 24px;
+            text-align: inherit;
+            margin-bottom: 15px;
+        }
+        .download-description {
+            font-size: 14px;
+            line-height: 24px;
+            text-align: inherit;
+            position: relative;
+            z-index: 30;
+        }
+        .download-buttons {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translate(-50%, 0);
+            z-index: 20;
+        }
+        .download-margin-left {
+            margin-left: 25px;
+        }
+        .download-mobile-container {
+            right: -100px;
+            left: inherit !important;
+            top: 20px;
+            bottom: 50px !important;
+        }
+        .download-desktop-container {
+            right: -170px;
+            left: inherit !important;
+            top: 56px;
+            bottom: 50px !important;
+        }
+        .download-mobile-image {
+            width: auto !important;
+            height: 180px !important;
+        }
+        .download-desktop-image {
+            width: auto !important;
+            height: 130px !important;
+        }
+        .semi-circle {
+            left: inherit !important;
+            transform: inherit !important;
+            right: -320px;
+            top: -15px;
+            width: 490px !important;
+            height: 250px !important;
+            border-radius: 250px 250px 0 0 !important;
+        }
+        .mobile-download {
+            width: 100px;
+            height: 35px;
+        }
+        .desktop-download {
+            height: 35px;
+            font-size: 14px;
+            padding: 8px 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 450px) { 
+    .download-margin-left {
+        margin-left: 15px !important;
+    }
+    .mobile-download {
+        width: 90px !important;
+    }
+}
+
+@media screen and (max-width: 380px) { 
+    .download-margin-left {
+        margin-left: 12px !important;
+    }
+}
+
+@media screen and (max-width: 365px) { 
+    .download-description {
+        line-height: 20px !important;
+    }
+    .mobile-download {
+        width: 85px !important;
+    }
+    .download-copy-container {
+        width: 56% !important;
+    }
+}
+
+@media screen and (max-width: 335px) { 
+    .download-copy-container {
+        padding-right: 5px !important;
+    }
+    .download-margin-left {
+        margin-left: 10px !important;
+    }
+    .download-desktop-container {
+        right: -185px !important;
+    }
+    .mobile-download {
+        width: 78px !important;
+    }
+    .download-title {
+        margin-bottom: 8px !important;
+    }
+    .desktop-download {
+        height: 30px !important;
+        padding: 8px 7px !important;
+    }
+}
+
+@media (min-width: 450px) and (max-width: 670px) { 
+    .download-description {
+        font-size: 16px !important;
+    }
+    .download-copy-container {
+        padding-left: 20px !important;
+        padding-top: 15px !important;
     }
 }
 
