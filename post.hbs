@@ -81,6 +81,23 @@
 
 {{#get "posts" limit="3" include="tags,authors" filter="id:-{{id}}+primary_tag:{{primary_tag.slug}}"}}
     {{#if posts}}
+        <div class="download-status">
+            <div class="row">
+                <div class="ml-auto mr-auto">
+                    <h3>{{t "Download Status"}}</h3>
+                    <div style="display:flex;">
+                        <a href="https://status.im/get/" class="btn btn-black simple-get-status-cta hover-transparent">
+                            Get Status
+                            <span class="margin-left-simple-cta my-auto">
+                            <img src="{{asset "img/icon-arrow-right-white.svg"}}"></span>
+                        </a>
+                    </div>
+                    <div style="text-align:center;">
+                        <img class="get-status-image" src="{{asset "img/desktop-and-mobile.svg"}}">
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="related-posts">
             <div class="container">
                 <div class="row">

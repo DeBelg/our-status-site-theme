@@ -10,6 +10,7 @@ $purple: #4360DF;
 $dark-purple: #2D48BE;
 $white-rgba: rgba(255, 255, 255, 0.6);
 $lighter-grey: #EAECEF;
+$primary: #3F59CD;
 
 $manrope: 'Manrope', sans-serif;
 $manrope-regular: 400;
@@ -619,6 +620,20 @@ blockquote{
     }
 }
 
+.download-status{
+    background: $primary;
+    padding-top: 40px;
+    h3 {
+        display: flex;
+        justify-content: center;
+        font-weight: normal;
+        font-size: 28px;
+        line-height: 38px;
+        color: #FFFFFF;
+        margin-bottom: 0 !important;
+    }
+}
+
 .related-posts{
     background: $lighter-grey;
     padding: 100px 0 70px;
@@ -977,6 +992,13 @@ blockquote{
     color: white;
 }
 
+.btn-black {
+    background-color: #000000;
+    border: 1px solid #000000;
+    border-radius: 3px;
+    color: white;
+}
+
 .get-status-cta {
     color: white;
     margin-left: 30px;
@@ -987,8 +1009,23 @@ blockquote{
     justify-content: space-between;
 }
 
+.simple-get-status-cta {
+    width: 160px;
+    margin: 30px auto 10px auto;
+}
+
+.hover-transparent:hover {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+}
+
 .margin-left-cta {
     margin-left: 1.5rem;
+}
+
+.margin-left-simple-cta {
+    margin-left: 1.1rem;
 }
 
 @media screen and (max-width: 1540px) {
@@ -1022,18 +1059,6 @@ blockquote{
 }
 
 @media screen and (max-width: 1199px) {
-    .mobile-get-status-cta {
-        position: absolute;
-        right: 65px;
-        top: 10px;
-        height: 40px;
-        max-width: 150px;
-    }
-
-    .get-status-cta {
-        width: 100%;
-        margin-left: 0 !important;
-    }
 
     header .mobile-nav .btns .btn:after {
         display: none;
@@ -1148,6 +1173,16 @@ blockquote{
                 margin: 0 -15px;
             }
         }
+    }
+    .simple-get-status-cta {
+        width: 150px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .get-status-image {
+        width: 90%;
+        padding-right: 18px;
     }
 }
 

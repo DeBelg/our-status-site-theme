@@ -34,7 +34,7 @@
         "ghost-theme"
     ],
     "devDependencies": {
-        "ghost-cli": "^1.14.1",
+        "ghost-cli": "^1.16.3",
         "gscan": "^3.5.7",
         "gulp": "4.0.2",
         "gulp-minify": "3.1.0",
