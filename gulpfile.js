@@ -5,11 +5,11 @@ gulpSass.compiler = require('node-sass')
 
 const sass = () =>
   gulp.src('./assets/scss/style.scss')
-    .pipe(gulpSass().on('error', gulpSass.logError))
+    .pipe(gulpSass({outputStyle: 'compressed'}))
     .pipe(gulp.dest('./assets/css'))
 
 const sassWatch = () =>
-  gulp.watch('./assets/scss/style.scss', ['sass'])
+  gulp.watch('./assets/scss/style.scss', gulp.series('sass'))
 
 exports.sass = sass
 exports.sassWatch = sassWatch
