@@ -72,12 +72,25 @@
                                 </ul>
                             </div>
                         </div>
+                        <div class="comments m-t-90">
+                            <script type="text/javascript">
+                              DiscourseEmbed = { discourseUrl: 'https://discuss.status.im/',
+                                                 discourseEmbedUrl: '{{url absolute="true"}}' };
+                              (function() {
+                                var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
+                                d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
+                                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
+                              })();
+                            </script>
+                            <div id='discourse-comments'></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </article>
 </main>
+
 
 {{#get "posts" limit="3" include="tags,authors" filter="id:-{{id}}+primary_tag:{{primary_tag.slug}}"}}
     {{#if posts}}
